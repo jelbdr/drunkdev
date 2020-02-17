@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drunk Developers</title>
+  <link rel="stylesheet" type="text/css" href="css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+  <div id="app">
+    <header class="hero has-padding-x-20" style="height: 100vh;">
+      <nav id="topNav" style="height: 10vh;">
+        <img src="images/logo.svg">
+        <ul>
+          <li><a href="#!">Projects</a></li>
+          <li><a href="#!">Testimonials</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#contactUsWrapper">Contact Us</a></li>
+        </ul> 
+        <button class="burger-icon animated fadeInDown" type="button" @click="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button> 
+      </nav>
+      <main class="grid-container" style="height: 90vh;">
+        <section id="mainText" class="is-vcentered">
+          <article>
+            <h1 class="m-0 title animated fadeInLeft delay-1s">Work hard, drink harder</h1>
+            <p style="margin-top: 0px;" class="animated fadeInLeft delay-1s">We may be 
+              <span class="blue-text"><strong>drunk</strong></span>
+              but we deliver
+              <span class="purple-text"><strong>quality</strong></span><br>
+              working websites and softwares.
+            </p>
+            <ul>
+              <li class="animated fadeInLeft delay-2s">Personal and corporate websites.</li>
+              <li class="animated fadeInLeft delay-3s">Customer relation management systems.</li>
+              <li class="animated fadeInLeft delay-4s">E-commerce websites.</li>
+              <li class="animated fadeInLeft delay-5s">Software application as service systems.</li>
+            </ul>
+            <div class="request-btn w-100 animated fadeInDown slow">        
+              <button type="button" class="primary-btn">
+                Request a quote
+              </button>
+            </div>
+          </article>
+        </section>
+        <figure class="animated slideInRight delay-.5s slower" id="mainImage">
+          <img src="images/hero.png" width="100%" height="90%">
+        </figure>
+        
+      </main>
+    </header>
+  
+    <nav id="sideNav":class="showSideNav ? 'animated slideInRight' : 'animated slideOutRight'">
+      <div style="display: flex; justify-content: flex-end;">
+        <button type="button" @click="closeMenu()" style="    margin: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 5px 10px;
+    background: transparent;
+    color: white;
+    font-size: 16px;">
+          x
+        </button>
+      </div>
+      <div style="height: 90vh;">
+        <ul style="list-style: none;
+    color: white;
+    font-size: calc(13px + 1.5vw);
+    padding: 20px;">
+          <li style="margin: 20px 0px; color: white;"><a href="#!">Projects</a></li>
+          <li style="margin: 20px 0px; color: white;"><a href="#!">Testimonials</a></li>
+          <li style="margin: 20px 0px; color: white;"><a href="#articles">Articles</a></li>
+          <li style="margin: 20px 0px; color: white;"><a href="#contactUsWrapper">Contact Us</a></li>
+        </ul> 
+      </div>
+    </nav>
+    <section id="articles"
+      v-show="itemsToDisplay"
+      class="grid-container has-padding-x-20 h-100"
+    >
+      <h1 class="title" align="center">Articles</h1>
+      <article v-for="i in itemsToDisplay"
+        class="grid-item"
+      >
+        <header class="is-vcentered">
+          <figure class="is-vhcentered" style="margin: 5px 20px;">
+            <img src="images/author.png" width="90" height="90">
+          </figure>
+          <aside>
+            <h1 class="m-0" v-html="i.title" style="margin-bottom: 0px;"></h1>
+            <p class="m-0">Friday December 16, 2019</p>
+            <p class="purple-text m-0">Fred THe Slasher Designer</p>
+          </aside>
+        </header>
+        <p v-html="i.body"></p>
+        <p class="read-more" align="right">
+          <a href="#!"><u>Read more</u></a>
+        </p>
+      </article>
+      <p style="padding: 20px;" align="center">     
+        <a href="#!"><u>Explore more articles</u></a>
+      </p>
+    </section>
+    <section class="has-padding-x-20 is-vhcentered"
+      id="contactUs"
+      style="height: 900px;"
+    >
+      <div id="contactUsWrapper">
+        <h1 align="center">Contact Us</h1>
+        <Form id="contactForm"
+          v-on:submit.prevent="onSubmit"
+          v:on:reset.prevent="resetForm"
+        >
+          <div class="grid-container">
+            <b>Who are you?</b> 
+            <input type="text"
+              placeholder="John Doe (The usual placeholder)"
+            >
+              <b>Where can we spam you?</b> 
+            <input type="text"
+              placeholder="john.doe@e-male.com"
+            >
+              <b>Where can we call you at night?</b> 
+            <input type="text"
+              placeholder="+1 800 123 4567"
+            >
+              <b>What do you want to tell us?</b>
+            <textarea rows="3"
+              cols="5"
+              placeholder="My website looks is horrible. Pimp my website bruh."
+            >
+            </textarea>
+          </div>
+          <div id="buttonWrapper">
+            <button type="reset"
+              class="outline-btn"
+            >
+              Reset the form
+            </button>
+            <button type="submit"
+              class="primary-btn"
+            >
+              Send your message now
+            </button>
+          </div>
+        </Form>
+      </div>
+    </section>
+    <section class="has-padding-x-20 is-vhcentered"
+      id="signUp"
+    >
+      <div id="signUpWrapper">
+        <h1 class="title" align="center">Sign Up</h1>
+        <form>
+          <div class="grid-container">
+            <div></div>
+            <b>Email</b>
+            <div style="margin-bottom: 20px;"> 
+              <input type="email" v-model="user.email">
+              <div class="alert animated fadeIn"
+                v-show="this.errors.email"
+              >
+                <span v-text="this.errors.email"></span>
+              </div>
+            </div>
+
+            <div></div>
+            <b>Password</b> 
+            <div style="margin-bottom: 20px;">
+              <input type="password"
+                v-model="user.password"
+              >
+              <div class="alert animated fadeIn"
+                v-show="this.errors.password"
+              >
+                <span
+                  v-text="this.errors.password"></span>
+              </div>
+            </div>
+          </div>
+          <div v-if="hasAlert" class="is-vhcentered animated fadeInDown"
+            :class="isSuccessAlert ? 'success-noti' : 'fail-noti'"
+          >
+            <p class="m-0" 
+              v-text="isSuccessAlert ? 'Registration Success!' : 'Error 400. Bad request.'"
+              align="center"
+            >
+            </p>
+             <button class="close-btn"
+              type="button"
+              @click="closeAlert()"
+            >
+              x
+            </button> 
+          </div>
+          <div id="buttonWrapper">
+            <button type="reset"
+              class="outline-btn" 
+              @click="resetForm()"
+            >
+              Reset the form
+            </button>
+            <button type="button"
+              @click="checkForm()"
+              class="primary-btn"
+            >
+              Sign up
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>© 2016-2019. Drunk Developers. All rights reserved.</p>
+      Like us on <a href="#">Facebook</a>
+      <br>
+      Follow us on <a href="#">Twitter</a>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>

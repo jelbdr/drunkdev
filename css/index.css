@@ -1,0 +1,533 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+
+:root {
+  --link-color: #0F6C74;
+}
+
+body, html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: calc(15px + 0.5vw);
+  background: white;
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.blue-text {
+  color: #00CCFE;
+}
+
+.purple-text {
+  color: #6138D5;
+}
+
+.container {
+  margin: 0 auto;
+  background: #ffffff;
+  max-width: 1024px;
+}
+
+.has-padding-x-20 {
+  padding: 0px 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.is-vcentered {
+  display: flex;
+  align-items: center;
+}
+
+.is-vhcentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.title {
+  font-size: calc(1rem + 1.5vw);
+}
+
+nav a, #articles a {
+  text-decoration: none;
+  color: #0F6C74;
+}
+
+.primary-btn, .outline-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-size: calc(13px + 0.5vw);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.primary-btn:hover, .outline-btn:hover {
+  transform: translateY(-5px);
+}
+
+
+header.hero {
+  background: url('../images/hero-bg.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh; 
+}
+
+nav#topNav {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center; 
+}
+
+nav#topNav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+
+main article ul {
+  list-style-image: url('../images/bullet.svg');
+}
+
+main article button {
+  background: #ff7f1a;
+  border: 1px solid #ff7f1a;
+  box-shadow: 5px 6px 14px #ff7f1a85;
+}
+
+main article button:hover {
+  box-shadow: 5px 6px 20px #ff7f1a85;
+}
+
+main.grid-container {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+#articles article {
+  border: 2px dashed #4f4a5c;
+  border-radius: 0px 30px 0px 30px;
+  background: #f4faff;
+  height: 45vh;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#articles img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #4f4a5c;
+}
+
+#contactUs {
+  background: url('../images/contact-us-bg.png') no-repeat center center;
+  background-size: contain;
+}
+
+#contactUs .grid-container, #signUp .grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+form b {
+  text-align: right;
+  margin-right: 10px;: 
+}
+
+textarea {
+  display: block;
+  padding: 5px;
+  font-size: calc(12px + 0.5vw);
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+form b, input {
+  height: 5vh;    
+  padding: 5px;
+  font-size: calc(12px + 0.5vw);
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: calc(12px + 0.5vw);
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+#contactUsWrapper {
+  width: 55vw;
+}
+
+#contactForm input {
+  margin-bottom: 20px;
+}
+
+#contactUs .outline-btn {
+  border: 2px solid #9e5bc8;
+  color: #9e5bc8;
+}
+
+#contactUs .primary-btn {
+  background: #9e5bc8;
+  color: white;
+  border: 1px solid #9e5bc8;
+}
+
+#signUp {
+  background: url('../images/sign-up-bg.png') no-repeat center center;
+  background-size: contain;
+  height: 100vh;
+  margin: 20px 0px 50px;
+  height: 80vh;
+}
+
+#sigUp form  {
+  width: 55vw;
+}
+
+#signUp button.primary-btn, #signUp button.outline-btn  {
+  border: 2px solid #D63131;
+}
+
+#signUp button.primary-btn {
+  background: #D63131;
+  color: white;
+}
+
+#signUp button.outline-btn {
+  background: transparent;
+  color: #D63131;
+}
+
+.alert {
+  color: #D63131;
+  font-size: calc(10px + 0.4vw);
+}
+
+@-webkit-keyframes fadeOut {
+    0% { opacity: 1;}
+    99% { opacity: 0.01;width: 100%; height: 100%;}
+    100% { opacity: 0;width: 0; height: 0;}
+}  
+@keyframes fadeOut {
+    0% { opacity: 1;}
+    99% { opacity: 0.01;width: 100%; height: 100%;}
+    100% { opacity: 0;width: 0; height: 0;}
+}
+
+.request-btn, .burger-icon {
+  text-align: center;
+  margin: 50px 0px;
+  animation-delay: 6s;
+}
+
+.alert button {
+  border-radius: 50%;
+  border: 1px solid #D63131;
+  color: #D63131;
+  display: block;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+footer {
+  background: #6138D5;
+  color: white;
+  font-size: calc(12px + 0.5vw);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+button.burger-icon {
+  display: none;
+  color: #6138D5;
+  border: none;
+  background: none;
+  font-size: calc(15px + 0.5vw);
+}
+
+#sideNav {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  width: 50%;
+  left: 50%;
+  background: #6138D5;
+  transition: 5s;
+  box-shadow: -3px 5px 10px grey;
+}
+
+#sideNav a {
+  color: white;
+}
+ 
+#signUp .grid-container {
+  display: grid;
+  grid-template-columns: 10% 30% 50%;
+}
+
+#signUp .success-noti, #signUp .fail-noti {
+  font-size: calc(7px + 0.5vw);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  width: 18vw;
+  margin: auto;
+}
+
+#signUp .fail-noti {
+  background: #f08080;
+}
+
+#signUp .success-noti {
+  background: #90EE90;
+}
+
+#buttonWrapper {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.close-btn {
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  margin-left: 20px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+p.read-more {
+  text-align: right
+
+  #contactUs {
+    background-size: cover;
+  };
+}
+
+
+button:active, button:focus {
+  outline: none;
+}
+
+footer {
+  font-size: calc(10px + 0.5vw);
+  padding: 20px 0px;
+}
+
+
+footer a {
+  text-decoration: none;
+  color: #00ccfe;
+}
+
+
+@media only screen and (min-width: 1800px) {
+  .has-padding-x-20 {
+    padding: 0px 220px;
+  }  
+
+  main header {
+    height: 80vh; 
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: calc(11px + 1vw);
+  }
+
+  header nav img {
+    height: 15px;
+  }
+  
+  nav#topNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav#topNav ul {
+    display: none;
+  }
+  
+
+  main.grid-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+     grid-template-columns: 100% 100%;
+  }
+
+  #mainText {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #mainText article h1, #mainText article p {
+   text-align: center; 
+  }
+
+  #mainImage {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    margin: auto;
+  }
+  
+  section#articles {
+    margin-top: 50px;
+  }
+
+  section#articles header, section#articles figure{
+    display: block;
+    text-align: center; 
+    margin: auto;
+  }
+
+  #articles article {
+    height: 55vh;
+    overflow: hidden;
+  }
+  
+  #articles article p {
+    font-size: calc(7px + 2vw);
+  }
+
+  p.read-more {
+    text-align: center;
+  }
+
+  #contactUs {
+    background-size: cover;
+    height: 100vh;
+  }
+
+  #contactUs #contactUsWrapper {
+    width: 100%;
+  }
+
+  #contactUs #buttonWrapper {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #contactUs .outline-btn {
+    margin-bottom: 20px;
+  }
+
+  #signUp {
+    background-size: cover;
+    height: 70vh;
+  }
+
+  #signUpWrapper {
+    width: 100%;
+  }
+
+  #sigUp form  {
+    width: 100%;
+  }
+
+  #signUp .success-noti, #signUp .fail-noti {
+    width: 70vw;
+    font-size: calc(7px + 2vw);
+  }
+
+  #buttonWrapper {
+    width: 100%;
+  }
+
+  #sideNav {
+    display: block;
+  }
+
+  button.burger-icon {
+    display: block;
+  }
+
+  .request-btn {
+    margin: 20px 0px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #articles article p {
+    font-size: calc(7px + 2vw);
+  } 
+} 
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  #mainImage {
+    margin: 0px;
+  }
+
+  #mainText h1 {
+    font-size: calc(1rem + 3vw);
+  }
+
+  #articles article {
+    height: 45vh;
+  }
+
+  #articles article p {
+    font-size: calc(8px + 2vw);
+  }
+
+
+  #articles article h1{
+    font-size: calc(8px + 2.5vw);
+  }
+
+  form b, input {
+    font-size: calc(15px + 0.5vw);
+    align-self: flex-end;
+  }
+
+ 
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A0D2AF" offset="0%"></stop>
+            <stop stop-color="#20A348" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-42.000000, -266.000000)">
+            <g id="Hero-Banner" transform="translate(-325.000000, -961.000000)">
+                <rect id="Hero-Background" fill="#FFFCE6" transform="translate(929.000000, 754.000000) rotate(151.000000) translate(-929.000000, -754.000000) " x="86" y="360" width="1686" height="788" rx="298"></rect>
+                <g id="Slogan" transform="translate(341.000000, 1033.000000)"></g>
+                <g id="Services" transform="translate(367.000000, 1170.000000)" fill="url(#linearGradient-1)">
+                    <path d="M7,56 L13,70 C10.3333333,68.2571421 8.33333333,67.3857132 7,67.3857132 C5.66666667,67.3857132 3.66666667,68.2571421 1,70 L7,56 Z" id="Triangle" transform="translate(7.000000, 63.000000) rotate(-270.000000) translate(-7.000000, -63.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
